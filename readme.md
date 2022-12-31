@@ -3,13 +3,14 @@
 #### Description:
 
 ### How to run the game (for Windows only)
-- In order to run the game download all files in a desired directory.
+- In order to run the game download all files in a desired directory
 - Select everything > right click > send to > compressed (zip) folder
 - Name the file however you like, but make sure to change extension '.zip' to '.love'
 - Move that '.love' file into builder folder
 - Once you are in builder folder, select '.love' file and drag it on top of build.bat file
-- When that process is finished, you should see new '.zip' file.
+- When that process is finished, you should see new '.zip' file
 - Simply extract that file in a desired directory and run the '.exe' file
+- **Important Note:** There is already `2runs.zip` in `builder` that you can extract and play the game immediately if you don't want to edit the code.
 
 ### Gameplay
 2runs is a platformer in which you have to play 2 characters and complete 2 different levels simultaneously.
