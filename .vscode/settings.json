@@ -1,0 +1,12 @@
+{
+    "Lua.diagnostics.globals": [
+        "love",
+        "lldebugger",
+        "EnemyBullet"
+    ],
+    "Lua.diagnostics.disable": [
+        "redundant-parameter",
+        "deprecated",
+        "duplicate-set-field"
+    ]
+}
