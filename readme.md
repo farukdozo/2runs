@@ -13,7 +13,7 @@
 - **Important Note:** There is already `2runs.zip` in `builder` that you can extract and play the game immediately if you don't want to edit the code.
 
 ### Gameplay
-2runs is a platformer in which you have to play 2 characters and complete 2 different levels simultaneously.
+2runs is a platformer in which you have to play 2 characters and complete 2 different levels at the same time.
 Your goal is to simply reach the end of the level as fast as you can with both characters. There are no any items/stars/points that you have to collect, only enemies that you can either shoot or avoid. Also make sure to avoid falling and hitting red tiles, as they will kill you as well. You only have 1 life, so if either character dies, you have to start everything over again.
 
 #### Player controls and mechanics
@@ -26,8 +26,8 @@ Controls for first characters are:
 Controls for second characters are:
 - **h** - move left
 - **k** - move right
-- **u** - jump
-- **n** - shoot
+- **n** - jump
+- **u** - shoot
 As for mechanics there are only 2 things worth explaining:
 1. Shooting. You have unlimited bullets, but you can only shoot once per second. Bullets are also very tiny so make sure to be accurate when shooting.
 2. Wall-Jump. Wall-Jump is very important mechanic in this game. It allows you to jump one more time, but only when you are collided with any vertical wall. As you are walljumping make sure that you are collided with the wall by holding the movement key (e.g. if you the wall is on your left, hold left movement key as you are walljumping of of it).
@@ -36,7 +36,7 @@ It's important to note that it will only work if you jumped of the ground previo
 #### Enemy mechanics
 There are 2 types of enemies:
 - First type are simple enemies that only move left-right or up-down.
-- Second type of enemies are shooters or turrets, however you like to call them. They are stationary, but they shoot bullets every 2 seconds. If either player gets hit by the bullet, both will die and the game will restart.
+- Second type of enemies are shooters or turrets, however you like to call them. They are stationary, but they shoot bullets every 3 seconds. If either player gets hit by the bullet, both will die and the game will restart.
 Same rules apply to both type of the enemies. If either player collides with them, game restarts. You can kill either of the enemies by shooting them only once, but there's a catch. They will respawn every 3 seconds, and it is impossible to kill them permanently. :)
 
 ### Code
@@ -84,7 +84,7 @@ function Entity:wasVerticallyAligned(e)
     return self.last.x < e.x + e.width and self.last.x + self.width > e.x
 end
 ```
-If entities were collided horizontally then wether the player is on the left or right side of the tile also needs checking. To determine that simply compare if player's origin is more to the right than tile's origin. If true then the player is on the right side, otherwise the player is on the left side. After that simply adjust player's **x** attribute.
+If entities were collided horizontally then wether the player is on the left or right side of the tile also needs checking. To determine that simply compare if player's center is more to the right than tile's center. If true then the player is on the right side, otherwise the player is on the left side. After that simply adjust player's **x** attribute.
 Same thing is applied in case of vertical collision.
 ```
 function Entity:resolveCollision(e)
@@ -146,7 +146,7 @@ function Player:canJump()
     return self.y == self.last.y
 end
 ```
-Player can jump only when he is on the ground. This is check by comparing current **y** value and the value of **y** 1 frame before (in code it is **last.y**).
+Player can jump only when he is on the ground. This is checked by comparing current **y** value and the value of **y** 1 frame before (in code it is **last.y**).
 If those values are equal it means that the player is on the ground and if jump key is pressed player will jump.
 ```
 function playerJump()
@@ -238,7 +238,7 @@ if self.shootTimer > 2 then
     self.shoot = true
 end
 ```
-Shooters will shoot bullets every 2 seconds. Every time **shooter.shoot** value is **true**, the bullet is fired and timer is restarted.
+Shooters will shoot bullets every 3 seconds. Every time **shooter.shoot** value is **true**, the bullet is fired and timer is restarted.
 ```
 for i,bullet in ipairs(listOfEnemyBullets1) do
     if player1:checkCollision(bullet) then
@@ -257,7 +257,7 @@ for i,wall in ipairs(walls) do
     end
 end
 ```
-Remove bullets each time they hit collide with wall.
+Bullets are removed each time they collide with the wall.
 
 ##### Enemy respawn
 Enemies and shooters in this game will respawn every 3 seconds.

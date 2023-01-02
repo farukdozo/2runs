@@ -17,6 +17,9 @@ function Shooter:new(x, y, rotation)
 end
 
 function Shooter:update(dt)
+    -- Keep shootTimer value at 0 while shooter is dead
+    if self.isAlive == false then self.shootTimer = 0 end
+
     -- Shooting
     self.shootTimer = self.shootTimer + dt
 
@@ -25,7 +28,7 @@ function Shooter:update(dt)
         self.shoot = false
     end
 
-    if self.shootTimer > 2 then
+    if self.shootTimer > 3   then
         self.shoot = true
     end
 
