@@ -1,8 +1,11 @@
 # 2runs
-#### Video Demo:  <URL HERE>
+#### Video Demo: [Walkthrough](https://www.youtube.com/watch?v=aJbE7pswdaU&ab_channel=Undefined)
+#### Download Game: [Download Link](https://love2d.org/forums/download/file.php?id=21909)
+- **Note:** Extract the `.zip` file when you download it. After that run the `2runs.exe`. Windows might warn you that this is some kind of virus, it's not, trust me. :)
+
 #### Description:
 
-### How to run the game (for Windows only)
+### How to run the game after editing code (for Windows only)
 - In order to run the game download all files in a desired directory
 - Select everything > right click > send to > compressed (zip) folder
 - Name the file however you like, but make sure to change extension '.zip' to '.love'
