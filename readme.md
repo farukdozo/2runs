@@ -1,7 +1,7 @@
 # 2runs
 #### Video Demo: [Walkthrough](https://www.youtube.com/watch?v=aJbE7pswdaU&ab_channel=Undefined)
 #### Download Game: [Download Link](https://love2d.org/forums/download/file.php?id=21909)
-- **Note:** Extract the `.zip` file when you download it. After that run the `2runs.exe`. Windows might warn you that this is some kind of virus, it's not, trust me. :)
+- **Note:** Extract the `.zip` file when you download it. After that run the `2runs.exe`. Windows might warn you that this is some kind of virus, it's not, trust me :). Another thing, make sure that your resolution is set to at least 1920 x 1080 and 100% scale, otherwise the game won't fit properly on your screen.
 
 #### Description:
 
